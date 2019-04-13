@@ -29,6 +29,8 @@ opts_knit$set(width = 75)
 
 ```{r echo=FALSE}
 library(tidyverse)
+library(rgdal)
+library(leaflet)
 source(here::here("code/lib.R"))
 theme_set(theme_bw())
 ```
@@ -53,3 +55,37 @@ Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “po
 Queremos também analisar a visibilidade atribuída a cada região do país, a partir disso descobrir se existe algum estado que se sobressai e aumenta a média de determinada região. 
 
 ##4. Pergunta 4?
+
+```{r }
+# Importando shapefile (mapa do Brasil)----
+shp <- readOGR("..\\map\\.", "BRUFE250GC_SIR", stringsAsFactors=FALSE, encoding="UTF-8")
+# Importando códigos do IBGE e adicionando ao dataset----
+ibge <- read.csv("..\\ufs\\estadosibge.csv", header=T,sep=",")
+
+engaj <- atividade %>% group_by(UF) %>% na.omit(.) %>% summarise(engajamento = median(engaj_total_proprio))
+
+class(engaj)
+
+engaj <- merge(engaj,ibge, by.x = "UF", by.y = "UF")
+# Fazendo a junção entre o dataset e o shapefile----
+engajamentoBrasil <- merge(shp, engaj, by.x = "CD_GEOCUF", by.y = "Código.UF")
+#Tratamento e transformação dos dados----
+proj4string(engajamentoBrasil) <- CRS("+proj=longlat +datum=WGS84 +no_defs") #adicionando coordenadas geográficas
+# Gerando o mapa---
+pal <- colorBin("Reds",domain = NULL,n=10) #cores do mapa
+state_popup <- paste0("<strong>Estado: </strong>", 
+                      engajamentoBrasil$Unidade.da.Federação, 
+                      "<br><strong>Engajamento: </strong>", 
+                      engajamentoBrasil$engajamento)
+leaflet(data = engajamentoBrasil) %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addPolygons(fillColor = ~pal(engajamentoBrasil$engajamento), 
+              fillOpacity = 0.5, 
+              color = "#BDBDC3", 
+              weight = 1, 
+              popup = state_popup) %>%
+  addLegend("bottomright", pal = pal, values = ~engajamentoBrasil$engajamento,
+            title = "Engajamento gerado por conteúdo próprio no Twitter",
+            opacity = 2)
+```
+
