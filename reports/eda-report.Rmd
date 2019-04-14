@@ -16,6 +16,7 @@ library(knitr)
 library(rmdformats)
 library(DT)
 ## Global options
+options(scipen=999)
 options(max.print = "75")
 opts_chunk$set(echo = TRUE,
 	             cache = FALSE,
@@ -29,6 +30,7 @@ opts_knit$set(width = 75)
 
 ```{r echo=FALSE}
 library(tidyverse)
+library(plotly)
 ## library(rgdal)
 ## library(leaflet)
 source(here::here("code/lib.R"))
@@ -75,12 +77,22 @@ Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “po
 Para uma melhor representação, usaremos apenas os 5 partidos mais seguidos.
 
 ```{r}
+
 top_5_partidos <- ativos %>%
   group_by(partido) %>% summarise(seguidores = sum(seguidores)) %>% arrange(-seguidores) %>% slice(1:5) 
 
-top_5_partidos %>% ggplot(aes(x=partido, y=seguidores)) + geom_boxplot()
- 
+tp <- ativos %>% filter(partido == "PT" | partido == "PSL" | partido == "PSOL" | partido == "PODE" | partido == "PSDB")
 
+
+p <- ggplot(tp, aes(x=partido, y=seguidores, fill=partido)) + 
+    geom_boxplot(alpha=0.3) +
+    theme(legend.position="none") +
+    coord_flip()
+
+
+
+
+ggplotly(p)
 
   
 ```
