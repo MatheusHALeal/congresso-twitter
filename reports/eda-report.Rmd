@@ -87,11 +87,7 @@ tp <- ativos %>% filter(partido == "PT" | partido == "PSL" | partido == "PSOL" |
 p <- ggplot(tp, aes(x=partido, y=seguidores, fill=partido)) + 
     geom_boxplot(alpha=0.3) +
     theme(legend.position="none") +
-    coord_flip()
-
-
-
-
+    coord_flip() + geom_text(aes(label=nome_eleitoral))
 ggplotly(p)
 
   
