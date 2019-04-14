@@ -44,6 +44,27 @@ atividade = read_projectdata()
 
 Inicialmente queremos analisar se existe e qual a relação entre número de seguidores, engajamento e atividade do parlamentar.
 
+```{r}
+atividade %>% 
+  filter(!is.na(twitter), seguidores != 0, segue != 0) %>%
+  ggplot(aes(n_proprio, seguidores))+  geom_point(aes(size= engaj_total_proprio), alpha =.5)
+
+```
+Relacionando as três variáveis observamos que a maioria dos parlamentares têm uma quantidade de seguidores similiar, assim como o conteúdo próprio produzido. Contudo conseguimos observar alguns casos extremos, existindo um parlamentar com muitos seguidores, pouco conteúdo próprio e engajamento total baixo. Dois com pouquíssimo ou quase nenhum conteúdo próprio, mas ainda com destaque na quantidade de seguidores. Outros pontos que também chamam atenção é o que tem um certo equílibrio entre as três variáveis, e por último, o parlamentar que possui mais conteúdo próprio também é o um dos que possui menos seguidores e engajamento. 
+Agora iremos analisar os casos extremos, mas agora atribuindo os nomes aos pontos. 
+
+```{r}
+atividade %>% 
+  filter(!is.na(twitter), seguidores != 0, segue != 0) %>%
+  ggplot(aes(n_proprio, seguidores, label=nome_eleitoral))+  geom_point(alpha =.5)+ geom_text(aes(label=nome_eleitoral), hjust=0, vjust=0, size = 2.5)
+
+```
+
+### falar sobre carreira anterior ?? -- romário . fflavio bolsonaro -- polemico ???? -- jose serra??? antigo rssrs. jean wyllys polemico??? 
+### bacelar--- quem é esse??
+
+
+
 ##1. Pergunta 1?
 
 Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “pontos fora da curva” são tão influentes quanto um partido inteiro.
