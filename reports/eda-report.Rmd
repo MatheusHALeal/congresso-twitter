@@ -29,8 +29,8 @@ opts_knit$set(width = 75)
 
 ```{r echo=FALSE}
 library(tidyverse)
-library(rgdal)
-library(leaflet)
+## library(rgdal)
+## library(leaflet)
 source(here::here("code/lib.R"))
 theme_set(theme_bw())
 ```
@@ -45,8 +45,10 @@ atividade = read_projectdata()
 Inicialmente queremos analisar se existe e qual a relação entre número de seguidores, engajamento e atividade do parlamentar.
 
 ```{r}
-atividade %>% 
-  filter(!is.na(twitter), seguidores != 0, segue != 0) %>%
+ativos <- atividade %>% 
+  filter(!is.na(twitter), seguidores != 0, segue != 0) 
+
+ ativos %>%
   ggplot(aes(n_proprio, seguidores))+  geom_point(aes(size= engaj_total_proprio), alpha =.5)
 
 ```
@@ -68,6 +70,18 @@ atividade %>%
 ##1. Pergunta 1?
 
 Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “pontos fora da curva” são tão influentes quanto um partido inteiro.
+
+
+Para uma melhor representação, usaremos apenas os 5 partidos mais seguidos.
+
+```{r}
+top_5_partidos <- ativos %>%
+  group_by(partido) %>% summarise(seguidores = sum(seguidores)) %>% arrange(-seguidores) %>% slice(1:5) 
+
+top_5_partidos %>% ggplot(aes(x=partido, y=seguidores, fill=partido)) + geom_boxplot()
+  
+```
+
 
 ##2. As personalidades de destaque conseguem ser mais influentes que um partido inteiro? 
 
