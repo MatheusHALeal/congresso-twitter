@@ -76,10 +76,9 @@ Para uma melhor representação, usaremos apenas os 5 partidos mais seguidos.
 
 ```{r}
 top_5_partidos <- ativos %>%
-  group_by(partido) %>% summarise(seguidores = sum(seguidores)) %>% arrange(-seguidores) %>% slice(1:5) 
+  group_by(partido, seguidores) %>% summarise() %>% arrange(-seguidores)
 
 top_5_partidos %>% ggplot(aes(x=partido, y=seguidores, fill=partido)) + geom_boxplot()
-  
 ```
 
 
