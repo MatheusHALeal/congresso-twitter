@@ -16,6 +16,7 @@ library(knitr)
 library(rmdformats)
 library(DT)
 ## Global options
+options(scipen=999)
 options(max.print = "75")
 opts_chunk$set(echo = TRUE,
 	             cache = FALSE,
@@ -31,12 +32,14 @@ opts_knit$set(width = 75)
 library(tidyverse)
 library(rgdal)
 library(leaflet)
+library(plotly)
+set.seed(123)
 source(here::here("code/lib.R"))
 theme_set(theme_bw())
 ```
 Nesta análise iremos explorar dados sobre as contas do Twitter de nossos representantes federais em 2019. Os dados brutos têm 72.316 tweets cuja data de criação segundo a API é em 2019. Esses tweets foram coletados em 22 de março de 2019.
 
-Primeiro vamos carregador nosso dados:
+Primeiro vamos carregar nosso dados:
 ```{r read}
 atividade = read_projectdata()
 ```
@@ -44,17 +47,117 @@ atividade = read_projectdata()
 
 Inicialmente queremos analisar se existe e qual a relação entre número de seguidores, engajamento e atividade do parlamentar.
 
-##1. Pergunta 1?
+##1. Parlamentares muito ativos são mais populares?
+
+Vamos considerar popularidade tanto a quantidade de seguidores, quanto o engajamento por conteúdo próprio.
+
+```{r}
+ativos <- atividade %>% 
+  filter(!is.na(twitter), seguidores != 0, segue != 0) 
+ ativos %>%
+  ggplot(aes(n_proprio, seguidores))+  geom_point(aes(size= engaj_total_proprio), alpha =.5)+
+   labs(title = "Distribuição dos seguidores pela atividade",
+             x = "Atividade", y = "Seguidores")
+```
+
+Relacionando as três variáveis observamos que a maioria dos parlamentares têm uma quantidade de seguidores similiar, assim como o conteúdo próprio produzido. Contudo conseguimos observar alguns casos extremos, existindo um parlamentar com muitos seguidores, pouco conteúdo próprio e engajamento total baixo. Dois com pouquíssimo ou quase nenhum conteúdo próprio, mas ainda com destaque na quantidade de seguidores. Outros pontos que também chamam atenção é o que tem um certo equílibrio entre as três variáveis, e por último, o parlamentar que possui mais conteúdo próprio também é o um dos que possui menos seguidores e engajamento. 
+Agora iremos analisar os casos extremos, mas agora atribuindo os nomes aos pontos. 
+
+```{r}
+atividade %>% 
+  filter(!is.na(twitter), seguidores != 0, segue != 0) %>%
+  ggplot(aes(n_proprio, seguidores, label=nome_eleitoral))+  geom_point(alpha =.5)+ geom_text(aes(label=nome_eleitoral), hjust=0, vjust=0, size = 2.5) +
+  labs(title = "Distribuição dos seguidores pela atividade",
+             x = "Atividade", y = "Seguidores")
+```
+
+Dentre os pontos destacados anteriormente está Romário, que possui um número discrepante de seguidores em relação aos outros. Esse fato pode estar atrelado a carreira futebolística do parlamentar, então houve um acumulo de seguidores, apesar do seu baixo engajamento. No caso mais equilibrado entre as variáveis aparece Marcelo Freixo. Entre os mais seguidos estão também Flávio Bolsonaro e Jean Wyllys que podem ser consideradas figuras públicas "polêmicas" e por isso o destaque. Por último temos Bacelar, o parlamentar que mais produziu conteúdo próprio, entretando está entre os menos populares. 
+
 
 Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “pontos fora da curva” são tão influentes quanto um partido inteiro.
 
+
 ##2. As personalidades de destaque conseguem ser mais influentes que um partido inteiro? 
 
-##3. Parlamentar em seu partido e parlamentar comparando com todos os partidos em geral.
+Considerando o conceito de influência igual ao quanto um parlamentar recebeu de likes e retweets em todos os tweets que ele postou, então podemos juntar os parlamentares em seus partidos e entender se há algum ou alguns que têm uma influência acima do normal, se destacando do restante do seu partido. 
 
-Queremos também analisar a visibilidade atribuída a cada região do país, a partir disso descobrir se existe algum estado que se sobressai e aumenta a média de determinada região. 
+```{r}
+atividade %>%
+  filter(!is.na(engaj_total)) %>% 
+  group_by(partido) %>% 
+  ggplot(aes(x = partido, y = engaj_total)) +
+  geom_boxplot() +
+  ylab("Influência") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
-##4. Pergunta 4?
+A partir do gráfico podemos entender os pontos como sendo parlamentares que mostram ter uma influência "fora do normal", considerando a influência que o restante do seu partido possui.
+Também é possível perceber que há alguns partidos que sua "caixinha"" no gráfico é mais alta que a maioria (uma vez que só é possível observar uma linha/faixa para a maioria dos partidos), como NOVO, PCdoB, PODE, PSL, PT, REDE e o PSOL, que se destaca dos outros por demonstrar possuir uma grande influência em geral, já que sua "caixinha" no gráfico é longa e não possui nem um pontinho fora.
+
+Agora vamos ver quem são alguns dos parlamentares que têm uma influência tão grande em relação aos seus partidos.
+Para escolher quais parlamentares vamos destacar, foram escolhidos os que aparentemente estão mais longe do que o "normal", em relação aos parlamentares do seu próprio partido, deveria ser. Assim foram escolhidos os três mais altos do DEM, o do PCdoB, o do PSC e os dois mais altos do PSL.
+
+```{r}
+
+DEM = atividade %>% 
+  filter(partido == "DEM") %>% 
+  filter(!is.na(engaj_total)) %>% 
+  arrange(-engaj_total)
+top_DEM = head(DEM, 3)
+
+PCdoB = atividade %>% 
+  filter(partido == "PCdoB") %>% 
+  filter(!is.na(engaj_total)) %>% 
+  arrange(-engaj_total)
+top_PCdoB = head(PCdoB, 1)
+
+PSC = atividade %>% 
+  filter(partido == "PSC") %>% 
+  filter(!is.na(engaj_total)) %>% 
+  arrange(-engaj_total)
+top_PSC = head(PSC, 1)
+
+PSL = atividade %>% 
+  filter(partido == "PSL") %>% 
+  filter(!is.na(engaj_total)) %>% 
+  arrange(-engaj_total)
+top_PSL = head(PSL, 2)
+
+tops = rbind(top_DEM, top_PCdoB, top_PSC, top_PSL)
+
+tops %>%
+  ggplot(aes(x = nome_eleitoral, y = engaj_total, size = 20, color = partido)) +
+  geom_point() +
+  ylab("Influência") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+##3. Elas conseguem ser tão destoantes também dentro dos próprios partidos?
+
+Para uma melhor representação, usaremos apenas os 5 partidos mais seguidos.
+
+```{r}
+top_5_partidos <- ativos %>%
+  group_by(partido) %>% summarise(seguidores = sum(seguidores)) %>% arrange(-seguidores) %>% slice(1:5) 
+tp <- ativos %>% filter(partido == "PT" | partido == "PSL" | partido == "PSOL" | partido == "PODE" | partido == "PSDB")
+p <- ggplot(tp, aes(x=partido, y=seguidores, fill=partido)) + 
+    geom_boxplot(alpha=0.3) +
+    theme(legend.position="none") +
+    coord_flip() + geom_text(aes(label=""), hjust=0, vjust=0, size = 2.5) +
+    labs(title = "Distribuição dos seguidores por partido",
+             x = "Seguidores", y = "Partido")
+ggplotly(p)
+  
+```
+
+Analisando o partido PODE, vemos que o mesmo possui um outlier discrepante em relação ao número de seguidores e em comparação com todos os outros partidos. Conseguimos observar também, que os 5 partidos analisados sempre possuem um parlamentar que fica acima do limite superior. Com execeção de PSL e PT, todos os parlamentares considerados muito populares, têm mais influência que um partido inteiro. 
+
+Mudando o contexto, queremos agora analisar como se distribui o engajamento que os parlamentares geraram, separando-os de acordo com o estado que os elegeu. A partir disso descobrir também se existe algum estado que se sobressai e aumenta as estatísticas de sua região. Aqui, vamo considerar parâmetro para influência o engajamento e não mais a quantidade de seguidores.
+
+##4. O Brasil possui estados "protagonistas influentes"? Esses estados se destacam quando comparados aos demais em sua região?
+
+Para melhor visualizar e responder essa pergunta, podemos mostrar de que forma se distribui a influência dos parlamentares que representam cada estado no território nacional. Para isso, iremos considerar o engajamento gerado por conteúdo próprio. Além disso, a fim de não desbalancear nossa visualização, vamos considerar como influência de cada estado a mediana do engajamento. 
 
 ```{r }
 # Importando shapefile (mapa do Brasil)----
@@ -77,15 +180,41 @@ state_popup <- paste0("<strong>Estado: </strong>",
                       engajamentoBrasil$Unidade.da.Federação, 
                       "<br><strong>Engajamento: </strong>", 
                       engajamentoBrasil$engajamento)
+bins <- c(100, 200, 500, 1000, Inf)
+pal <- colorBin("YlOrRd", domain = engajamentoBrasil$engajamento, bins = bins)
 leaflet(data = engajamentoBrasil) %>%
   addProviderTiles("CartoDB.Positron") %>%
-  addPolygons(fillColor = ~pal(engajamentoBrasil$engajamento), 
+  addPolygons(fillColor = ~pal(engajamento), 
               fillOpacity = 0.5, 
               color = "#BDBDC3", 
               weight = 1, 
               popup = state_popup) %>%
   addLegend("bottomright", pal = pal, values = ~engajamentoBrasil$engajamento,
-            title = "Engajamento gerado por conteúdo próprio no Twitter",
+            title = "Engajamento mediano gerado por conteúdo próprio no Twitter",
             opacity = 2)
 ```
 
+De cara, vemos que os estados do Sul e Sudeste exercem esses papéis de protagonismo no cenário nacional. Foi também lá que onde se elegeram personalidade polêmicas, como Alexandre Frota, Jean Wyllys e Flávio Bolsonaro. Alguns destaques na visualização: Rio Grande do Norte e Ceará no Nordeste; Amapá no Norte; Goiás no Centro-Oeste.
+
+Vamos tentar confirmar esses destaques com uma outra visualização. Agrupando por estado, somando o engajamento de seus parlamentares e plotando um boxplot para cada região.
+
+
+```{r}
+
+atividade <- atividade %>% na.omit(.)
+
+regioes <- merge(shp, ibge, by.x = "CD_GEOCUF", by.y = "Código.UF") 
+
+merged <- merge(atividade, regioes, by.x = "UF", by.y = "UF") %>% group_by(UF, NM_REGIAO) %>% summarise(s = sum(engaj_total_proprio))
+
+p <- ggplot(merged, aes(x=NM_REGIAO, y=s, fill=NM_REGIAO)) + 
+    geom_boxplot(alpha=0.3) +
+    theme(legend.position="none") +
+    labs(title = "Distribuição do engajamento por região",
+             x = "Região", y = "Engajamento por conteúdo próprio")
+
+
+ggplotly(p)
+```
+
+A região Sudeste confirma sua influência, estando bem acima das demais regiões, tendo quase 4 milhões de interações (engajamento) em média, maior que o máximo de todas as outras regiões. As únicas regiões que tiveram outliers foram o Norte e o Nordeste, sendo o Amapá e o Rio Grande do Sul seus respectivos outliers.
