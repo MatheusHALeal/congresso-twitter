@@ -64,8 +64,7 @@ atividade %>%
 
 ```
 
-### falar sobre carreira anterior ?? -- romário . fflavio bolsonaro -- polemico ???? -- jose serra??? antigo rssrs. jean wyllys polemico??? 
-### bacelar--- quem é esse??
+Dentre os pontos destacados anteriormente está Romário, que possui um número discrepante de seguidores em relação aos outros. Esse fato pode estar atrelado a carreira futebolística do parlamentar, então houve um acumulo de seguidores, apesar do seu baixo engajamento. No caso mais equilibrado entre as variáveis aparece Marcelo Freixo. Entre os mais seguidos estão também Flávio Bolsonaro e Jean Wyllys que podem ser consideradas figuras públicas "polêmicas" e por isso o destaque. Por último temos Bacelar, o parlamentar que mais produziu conteúdo próprio, entretando está entre os menos populares. 
 
 
 
