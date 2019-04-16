@@ -46,6 +46,8 @@ atividade = read_projectdata()
 
 Inicialmente queremos analisar se existe e qual a relação entre número de seguidores, engajamento e atividade do parlamentar.
 
+##1. Pergunta 1?
+
 ```{r}
 ativos <- atividade %>% 
   filter(!is.na(twitter), seguidores != 0, segue != 0) 
@@ -67,12 +69,10 @@ atividade %>%
 Dentre os pontos destacados anteriormente está Romário, que possui um número discrepante de seguidores em relação aos outros. Esse fato pode estar atrelado a carreira futebolística do parlamentar, então houve um acumulo de seguidores, apesar do seu baixo engajamento. No caso mais equilibrado entre as variáveis aparece Marcelo Freixo. Entre os mais seguidos estão também Flávio Bolsonaro e Jean Wyllys que podem ser consideradas figuras públicas "polêmicas" e por isso o destaque. Por último temos Bacelar, o parlamentar que mais produziu conteúdo próprio, entretando está entre os menos populares. 
 
 
-
-##1. Pergunta 1?
-
 Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “pontos fora da curva” são tão influentes quanto um partido inteiro.
 
 
+##2. As personalidades de destaque conseguem ser mais influentes que um partido inteiro? 
 Para uma melhor representação, usaremos apenas os 5 partidos mais seguidos.
 
 ```{r}
@@ -82,20 +82,20 @@ top_5_partidos <- ativos %>%
 
 tp <- ativos %>% filter(partido == "PT" | partido == "PSL" | partido == "PSOL" | partido == "PODE" | partido == "PSDB")
 
-
 p <- ggplot(tp, aes(x=partido, y=seguidores, fill=partido)) + 
     geom_boxplot(alpha=0.3) +
     theme(legend.position="none") +
-    coord_flip() + geom_text(aes(label=nome_eleitoral))
+    coord_flip() + geom_text(aes(label=""), hjust=0, vjust=0, size = 2.5)
 ggplotly(p)
 
   
 ```
 
 
-##2. As personalidades de destaque conseguem ser mais influentes que um partido inteiro? 
 
 ##3. Parlamentar em seu partido e parlamentar comparando com todos os partidos em geral.
+
+Analisando o partido PODE, vemos que o mesmo possui um outlier discrepante em relação ao número de seguidores e em comparação com todos os outros partidos. Conseguimos observar também, que os 5 partidos analisados sempre possuem um parlamentar que fica acima do limite superior. Com execeção de PSL e PT, todos os parlamentares considerados muito populares, têm mais influência que um partido inteiro. 
 
 Queremos também analisar a visibilidade atribuída a cada região do país, a partir disso descobrir se existe algum estado que se sobressai e aumenta a média de determinada região. 
 
