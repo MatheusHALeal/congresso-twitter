@@ -1,0 +1,472 @@
+[
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Outros",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Parecer",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Parecer",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Sâmia Bomfim",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Carlos Veras",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 8
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 3
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 12
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Proposição",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Sâmia Bomfim",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 20
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 23
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 17
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 16
+  },
+  {
+    "nome_autor": "Sâmia Bomfim",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 16
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 15
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 14
+  },
+  {
+    "nome_autor": "Gleisi Hoffmann",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 13
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 12
+  },
+  {
+    "nome_autor": "Professor Israel Batista",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 12
+  },
+  {
+    "nome_autor": "Gleisi Hoffmann",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 11
+  },
+  {
+    "nome_autor": "Jorge Solla",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 11
+  },
+  {
+    "nome_autor": "Carlos Veras",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 11
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 11
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 10
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 10
+  },
+  {
+    "nome_autor": "Gleisi Hoffmann",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 9
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 9
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 9
+  },
+  {
+    "nome_autor": "Carlos Veras",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 9
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 9
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 8
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 6
+  },
+  {
+    "nome_autor": "Carlos Veras",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 6
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Professor Israel Batista",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Sâmia Bomfim",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Sâmia Bomfim",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 4
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 3
+  },
+  {
+    "nome_autor": "Gleisi Hoffmann",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 2
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "José Guimarães",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Pedro Uczai",
+    "tipo_generico": "Voto em Separado",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Professor Israel Batista",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Ivan Valente",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Henrique Fontana",
+    "tipo_generico": "Emenda",
+    "qtd_de_documentos": 1
+  },
+  {
+    "nome_autor": "Paulo Teixeira",
+    "tipo_generico": "Requerimento",
+    "qtd_de_documentos": 1
+  }
+]
