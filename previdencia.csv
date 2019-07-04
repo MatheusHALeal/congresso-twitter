@@ -1,95 +1,95 @@
-id_principal,casa,id_autor,nome_autor,codTipo,sigla_tipo,descricao_tipo,tipo_generico,qtd_de_documentos,sigla_orgao
-14562,camara,141470,José Guimarães,144,REC,Recurso,Outros,1,CCP
-14562,camara,141470,José Guimarães,313,REQ,Requerimento de Retirada de assinatura em proposição que não seja de iniciativa coletiva,Requerimento,1,PLEN
-14562,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,1,PEC21500
-14562,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,1,PEC21500
-16526,camara,141470,José Guimarães,304,REQ,Requerimento de Apensação,Requerimento,4,PLEN
-16526,camara,141470,José Guimarães,139,PL,Projeto de Lei,Proposição,2,PL129295
-16526,camara,141488,Paulo Teixeira,139,PL,Projeto de Lei,Proposição,2,MESA
-16526,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,2,PL129295
-16526,camara,141470,José Guimarães,305,REQ,Requerimento de Desapensação,Requerimento,1,PLEN
-46249,camara,141488,Paulo Teixeira,260,VTS,Voto em Separado,Voto em Separado,2,PL629902
-46249,camara,141488,Paulo Teixeira,139,PL,Projeto de Lei,Proposição,1,MESA
-46249,camara,141488,Paulo Teixeira,305,REQ,Requerimento de Desapensação,Requerimento,1,PLEN
-46249,camara,141488,Paulo Teixeira,363,REQ,Requerimento de Desarquivamento de Proposições,Requerimento,1,PLEN
-46249,camara,178857,Jorge Solla,139,PL,Projeto de Lei,Proposição,1,PL629902
-46249,camara,178857,Jorge Solla,294,REQ,Requerimento de Audiência Pública,Requerimento,1,CSSF
-46249,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,1,PL629902
-257161,camara,73531,Ivan Valente,139,PL,Projeto de Lei,Proposição,1,CCJC
-345311,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-500183,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-541857,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,2,PL372212
-541857,camara,141488,Paulo Teixeira,147,REQ,Requerimento,Requerimento,1,PL372212
-541857,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,1,PL372212
-604888,camara,141470,José Guimarães,139,PL,Projeto de Lei,Proposição,1,MESA
-604888,camara,141488,Paulo Teixeira,190,PRL,Parecer do Relator,Parecer,1,CCJC
-604888,camara,141488,Paulo Teixeira,255,SBT,Substitutivo,Parecer,1,CCJC
-606722,camara,204535,Sâmia Bomfim,139,PL,Projeto de Lei,Proposição,1,CCP
-606722,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,1,PL718014
-1198512,camara,141470,José Guimarães,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-1198512,camara,141488,Paulo Teixeira,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-1198512,camara,160604,Pedro Uczai,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-1198512,camara,160604,Pedro Uczai,147,REQ,Requerimento,Requerimento,1,PEC01515
-1198512,camara,178857,Jorge Solla,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-1198512,camara,204426,Carlos Veras,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-1198512,camara,73482,Henrique Fontana,130,EMC,Emenda na Comissão,Emenda,1,PEC01515
-2119881,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,8,PEC28716
-2119881,camara,160604,Pedro Uczai,130,EMC,Emenda na Comissão,Emenda,3,PEC28716
-2119881,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,2,PEC28716
-2119881,camara,141470,José Guimarães,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-2119881,camara,141488,Paulo Teixeira,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-2119881,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,1,CCJC
-2119881,camara,73531,Ivan Valente,260,VTS,Voto em Separado,Voto em Separado,1,PEC28716
-2119881,camara,73531,Ivan Valente,688,REQ,Requerimento de Inclusão de Matéria Extra-Pauta na Ordem do Dia das Comissões,Requerimento,1,PEC28716
-2120775,camara,160604,Pedro Uczai,147,REQ,Requerimento,Requerimento,12,PL667016
-2120775,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,1,PL667016
-2122766,camara,141470,José Guimarães,304,REQ,Requerimento de Apensação,Requerimento,4,PLEN
-2122766,camara,141488,Paulo Teixeira,139,PL,Projeto de Lei,Proposição,2,MESA
-2122766,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,2,PL129295
-2190288,camara,204535,Sâmia Bomfim,130,EMC,Emenda na Comissão,Emenda,20,MPV87019
-2190288,camara,141488,Paulo Teixeira,130,EMC,Emenda na Comissão,Emenda,2,MPV87019
-2190288,camara,160604,Pedro Uczai,130,EMC,Emenda na Comissão,Emenda,2,MPV87019
-2190288,camara,178857,Jorge Solla,130,EMC,Emenda na Comissão,Emenda,2,MPV87019
-2192459,camara,178857,Jorge Solla,294,REQ,Requerimento de Audiência Pública,Requerimento,23,PEC00619
-2192459,camara,73531,Ivan Valente,294,REQ,Requerimento de Audiência Pública,Requerimento,17,PEC00619
-2192459,camara,160604,Pedro Uczai,294,REQ,Requerimento de Audiência Pública,Requerimento,16,PEC00619
-2192459,camara,204535,Sâmia Bomfim,294,REQ,Requerimento de Audiência Pública,Requerimento,16,PEC00619
-2192459,camara,178857,Jorge Solla,147,REQ,Requerimento,Requerimento,15,PEC00619
-2192459,camara,141470,José Guimarães,294,REQ,Requerimento de Audiência Pública,Requerimento,14,PEC00619
-2192459,camara,107283,Gleisi Hoffmann,294,REQ,Requerimento de Audiência Pública,Requerimento,13,PEC00619
-2192459,camara,141488,Paulo Teixeira,294,REQ,Requerimento de Audiência Pública,Requerimento,12,PEC00619
-2192459,camara,204383,Professor Israel Batista,130,EMC,Emenda na Comissão,Emenda,12,PEC00619
-2192459,camara,107283,Gleisi Hoffmann,147,REQ,Requerimento,Requerimento,11,PEC00619
-2192459,camara,178857,Jorge Solla,130,EMC,Emenda na Comissão,Emenda,11,PEC00619
-2192459,camara,204426,Carlos Veras,294,REQ,Requerimento de Audiência Pública,Requerimento,11,PEC00619
-2192459,camara,73482,Henrique Fontana,147,REQ,Requerimento,Requerimento,11,PEC00619
-2192459,camara,141488,Paulo Teixeira,130,EMC,Emenda na Comissão,Emenda,10,PEC00619
-2192459,camara,73482,Henrique Fontana,294,REQ,Requerimento de Audiência Pública,Requerimento,10,PEC00619
-2192459,camara,107283,Gleisi Hoffmann,130,EMC,Emenda na Comissão,Emenda,9,PEC00619
-2192459,camara,141470,José Guimarães,130,EMC,Emenda na Comissão,Emenda,9,PEC00619
-2192459,camara,160604,Pedro Uczai,130,EMC,Emenda na Comissão,Emenda,9,PEC00619
-2192459,camara,204426,Carlos Veras,130,EMC,Emenda na Comissão,Emenda,9,PEC00619
-2192459,camara,73482,Henrique Fontana,130,EMC,Emenda na Comissão,Emenda,9,PEC00619
-2192459,camara,141488,Paulo Teixeira,147,REQ,Requerimento,Requerimento,8,PEC00619
-2192459,camara,141470,José Guimarães,147,REQ,Requerimento,Requerimento,6,PEC00619
-2192459,camara,204426,Carlos Veras,147,REQ,Requerimento,Requerimento,6,PEC00619
-2192459,camara,141470,José Guimarães,147,REQ,Requerimento,Requerimento,4,CCJC
-2192459,camara,160604,Pedro Uczai,147,REQ,Requerimento,Requerimento,4,PEC00619
-2192459,camara,204383,Professor Israel Batista,294,REQ,Requerimento de Audiência Pública,Requerimento,4,PEC00619
-2192459,camara,204535,Sâmia Bomfim,130,EMC,Emenda na Comissão,Emenda,4,PEC00619
-2192459,camara,204535,Sâmia Bomfim,147,REQ,Requerimento,Requerimento,4,PEC00619
-2192459,camara,73531,Ivan Valente,130,EMC,Emenda na Comissão,Emenda,4,PEC00619
-2192459,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,4,PEC00619
-2192459,camara,141488,Paulo Teixeira,294,REQ,Requerimento de Audiência Pública,Requerimento,3,CCJC
-2192459,camara,107283,Gleisi Hoffmann,147,REQ,Requerimento,Requerimento,2,CCJC
-2192459,camara,141470,José Guimarães,294,REQ,Requerimento de Audiência Pública,Requerimento,2,CCJC
-2192459,camara,141488,Paulo Teixeira,147,REQ,Requerimento,Requerimento,2,CCJC
-2192459,camara,141470,José Guimarães,147,REQ,Requerimento,Requerimento,1,MESA
-2192459,camara,141470,José Guimarães,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-2192459,camara,141488,Paulo Teixeira,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-2192459,camara,160604,Pedro Uczai,260,VTS,Voto em Separado,Voto em Separado,1,CCJC
-2192459,camara,204383,Professor Israel Batista,147,REQ,Requerimento,Requerimento,1,PEC00619
-2192459,camara,73482,Henrique Fontana,294,REQ,Requerimento de Audiência Pública,Requerimento,1,CLAUDIO ANDRÉS PALAVECINO CÁCERES - Professor do Departamento de Direito do Trabalho e Seguridade Social da Universidade do Chile
-2192459,camara,73531,Ivan Valente,147,REQ,Requerimento,Requerimento,1,MESA
-2193540,camara,73482,Henrique Fontana,131,EMP,Emenda de Plenário,Emenda,1,PLEN
-2196833,camara,141488,Paulo Teixeira,294,REQ,Requerimento de Audiência Pública,Requerimento,1,CCJC
+nome_autor,tipo_generico,qtd_de_documentos
+José Guimarães,Outros,1
+José Guimarães,Requerimento,1
+Ivan Valente,Requerimento,1
+Ivan Valente,Requerimento,1
+José Guimarães,Requerimento,4
+José Guimarães,Proposição,2
+Paulo Teixeira,Proposição,2
+Ivan Valente,Requerimento,2
+José Guimarães,Requerimento,1
+Paulo Teixeira,Voto em Separado,2
+Paulo Teixeira,Proposição,1
+Paulo Teixeira,Requerimento,1
+Paulo Teixeira,Requerimento,1
+Jorge Solla,Proposição,1
+Jorge Solla,Requerimento,1
+Ivan Valente,Voto em Separado,1
+Ivan Valente,Proposição,1
+Ivan Valente,Voto em Separado,1
+Ivan Valente,Voto em Separado,1
+Ivan Valente,Voto em Separado,2
+Paulo Teixeira,Requerimento,1
+Ivan Valente,Requerimento,1
+José Guimarães,Proposição,1
+Paulo Teixeira,Parecer,1
+Paulo Teixeira,Parecer,1
+Sâmia Bomfim,Proposição,1
+Ivan Valente,Voto em Separado,1
+José Guimarães,Emenda,1
+Paulo Teixeira,Emenda,1
+Pedro Uczai,Emenda,1
+Pedro Uczai,Requerimento,1
+Jorge Solla,Emenda,1
+Carlos Veras,Emenda,1
+Henrique Fontana,Emenda,1
+Ivan Valente,Requerimento,8
+Pedro Uczai,Emenda,3
+Ivan Valente,Requerimento,2
+José Guimarães,Voto em Separado,1
+Paulo Teixeira,Voto em Separado,1
+Ivan Valente,Requerimento,1
+Ivan Valente,Voto em Separado,1
+Ivan Valente,Requerimento,1
+Pedro Uczai,Requerimento,12
+Ivan Valente,Requerimento,1
+José Guimarães,Requerimento,4
+Paulo Teixeira,Proposição,2
+Ivan Valente,Requerimento,2
+Sâmia Bomfim,Emenda,20
+Paulo Teixeira,Emenda,2
+Pedro Uczai,Emenda,2
+Jorge Solla,Emenda,2
+Jorge Solla,Requerimento,23
+Ivan Valente,Requerimento,17
+Pedro Uczai,Requerimento,16
+Sâmia Bomfim,Requerimento,16
+Jorge Solla,Requerimento,15
+José Guimarães,Requerimento,14
+Gleisi Hoffmann,Requerimento,13
+Paulo Teixeira,Requerimento,12
+Professor Israel Batista,Emenda,12
+Gleisi Hoffmann,Requerimento,11
+Jorge Solla,Emenda,11
+Carlos Veras,Requerimento,11
+Henrique Fontana,Requerimento,11
+Paulo Teixeira,Emenda,10
+Henrique Fontana,Requerimento,10
+Gleisi Hoffmann,Emenda,9
+José Guimarães,Emenda,9
+Pedro Uczai,Emenda,9
+Carlos Veras,Emenda,9
+Henrique Fontana,Emenda,9
+Paulo Teixeira,Requerimento,8
+José Guimarães,Requerimento,6
+Carlos Veras,Requerimento,6
+José Guimarães,Requerimento,4
+Pedro Uczai,Requerimento,4
+Professor Israel Batista,Requerimento,4
+Sâmia Bomfim,Emenda,4
+Sâmia Bomfim,Requerimento,4
+Ivan Valente,Emenda,4
+Ivan Valente,Requerimento,4
+Paulo Teixeira,Requerimento,3
+Gleisi Hoffmann,Requerimento,2
+José Guimarães,Requerimento,2
+Paulo Teixeira,Requerimento,2
+José Guimarães,Requerimento,1
+José Guimarães,Voto em Separado,1
+Paulo Teixeira,Voto em Separado,1
+Pedro Uczai,Voto em Separado,1
+Professor Israel Batista,Requerimento,1
+Henrique Fontana,Requerimento,1
+Ivan Valente,Requerimento,1
+Henrique Fontana,Emenda,1
+Paulo Teixeira,Requerimento,1
